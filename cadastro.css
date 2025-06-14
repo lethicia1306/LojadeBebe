@@ -1,0 +1,126 @@
+/* Estilos base mantendo a identidade visual da vitrine */
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff9fb; /* Mesmo fundo rosa claro da vitrine */
+  padding: 20px;
+  font-family: 'Comic Neue', cursive, sans-serif;
+}
+
+.cadastro-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0e6ff; /* Borda lavanda como na vitrine */
+}
+
+.cadastro-title {
+  color: #ff9bb3; /* Rosa pastel igual à vitrine */
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cadastro-subtitle {
+  color: #8a7fff; /* Lavanda pastel */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #8a7fff; /* Lavanda pastel */
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0d6ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #a5e1ff; /* Azul bebê */
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.btn-cadastrar {
+  width: 100%;
+  padding: 12px;
+  background-color: #a5e1ff; /* Azul bebê igual aos botões da vitrine */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.btn-cadastrar:hover {
+  background-color: #8ad1f5; /* Tom mais escuro no hover */
+}
+
+.btn-cadastrar:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+.login-link a {
+  color: #8a7fff; /* Lavanda pastel */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Validação de formulário */
+.ng-invalid.ng-touched:not(form) {
+  border-color: #ff9bb3 !important; /* Rosa para indicar erro */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .cadastro-card {
+    padding: 20px;
+  }
+}

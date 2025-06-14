@@ -1,0 +1,16 @@
+<!-- vitrine.component.html -->
+<div class="vitrine-container">
+  <h1 class="vitrine-title">Nossa Coleção de Roupinhas</h1>
+  
+  <div class="produtos-grid">
+    <div class="produto-card" *ngFor="let produto of produtos">
+      <img [src]="produto.imagem" [alt]="produto.nome" class="produto-imagem">
+      <div class="produto-info">
+        <h3 class="produto-nome">{{produto.nome}}</h3>
+        <p class="produto-descricao">{{produto.descricao}}</p>
+        <p class="produto-preco">{{produto.preco | currency:'BRL'}}</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<header>
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/cadastro">Cadastre-se</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/carrinho" class="carrinho-link">
+      <i class="material-icons">shopping_cart</i>
+      <span class="carrinho-qtd">{{itensCarrinho}}</span>
+    </a>
+  </nav>
+</header>
+
+<div class="cesta-container">
+  <div class="cesta-header">
+    <p class="cesta-subtitle">Confira seus itens antes de finalizar</p>
+  </div>
+
+  <div class="itens-container">
+    <div *ngFor="let item of cestaService.itens$ | async; let i = index" class="item-cesta">
+      <img [src]="item.imagem" [alt]="item.nome" class="item-imagem">
+      
+      <div class="item-info">
+        <h3 class="item-nome">{{item.nome}}</h3>
+        <p class="item-tamanho" *ngIf="item.tamanho">Tamanho: {{item.tamanho}}</p>
+        <p class="item-preco">{{item.preco | currency:'BRL'}}</p>
+      </div>
+      
+      <div class="item-quantidade">
+        <button class="btn-quantidade" (click)="diminuirQuantidade(item, i)">-</button>
+        <span class="quantidade">{{item.quantidade}}</span>
+        <button class="btn-quantidade" (click)="aumentarQuantidade(item, i)">+</button>
+      </div>
+      
+      <button class="btn-remover" (click)="cestaService.removerItem(i)">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+
+    <div *ngIf="(cestaService.itens$ | async)?.length === 0" class="cesta-vazia">
+      <i class="material-icons">child_friendly</i>
+      <p>Sua cestinha está vazia</p>
+      <a routerLink="/" class="btn-voltar">Voltar às comprinhas</a>
+    </div>
+  </div>
+
+  <div *ngIf="(cestaService.itens$ | async)?.length > 0" class="cesta-footer">
+    <div class="total-container">
+      <p>Total:</p>
+      <p class="total-valor">{{cestaService.total | currency:'BRL'}}</p>
+    </div>
+    
+    <button class="btn-finalizar" (click)="finalizarCompra()">
+      <i class="material-icons">check</i> Finalizar Compra
+    </button>
+  </div>
+</div>

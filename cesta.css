@@ -1,0 +1,229 @@
+/* Estilo principal mantendo a identidade visual */
+.carrinho-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff9fb; /* Fundo rosa clarinho */
+  border-radius: 15px;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.carrinho-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carrinho-title {
+  color: #ff9bb3; /* Rosa pastel */
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.carrinho-subtitle {
+  color: #8a7fff; /* Lavanda */
+  font-size: 1rem;
+}
+
+.itens-container {
+  margin-bottom: 30px;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  border: 1px solid #f0e6ff; /* Bordinha lavanda */
+  position: relative;
+}
+
+.item-imagem {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+.item-nome {
+  color: #6d5b97; /* Roxo mais escuro */
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.item-tamanho {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.item-preco {
+  color: #ff9bb3; /* Rosa */
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.item-quantidade {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.btn-quantidade {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a5e1ff; /* Azul bebê */
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.btn-quantidade:hover {
+  background-color: #8ad1f5; /* Azul mais forte */
+}
+
+.quantidade {
+  margin: 0 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: #ff9bb3; /* Rosa */
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.btn-remover:hover {
+  transform: scale(1.2);
+}
+
+.carrinho-vazio {
+  text-align: center;
+  padding: 40px 0;
+  color: #8a7fff; /* Lavanda */
+}
+
+.carrinho-vazio i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ff9bb3; /* Rosa */
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #a5e1ff; /* Azul bebê */
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+  background-color: #8ad1f5; /* Azul mais forte */
+}
+
+.carrinho-footer {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  border: 1px solid #f0e6ff;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #6d5b97;
+}
+
+.total-valor {
+  font-weight: 700;
+  color: #ff9bb3; /* Rosa */
+}
+
+.btn-finalizar {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff9bb3; /* Rosa */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-finalizar:hover {
+  background-color: #ff85a1; /* Rosa mais forte */
+}
+
+/* Ícones */
+.material-icons {
+  font-family: 'Material Icons';
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .item-carrinho {
+    flex-wrap: wrap;
+  }
+  
+  .item-quantidade {
+    margin: 10px 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn-remover {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+}
+.carrinho-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carrinho-qtd {
+  background-color: #ff9bb3;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  margin-left: 5px;
+}

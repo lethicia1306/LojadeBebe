@@ -1,0 +1,112 @@
+/* vitrine.component.css */
+
+/* Main container styling */
+.vitrine-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  background-color: #fff9fb; /* Very light pink background */
+}
+
+/* Title styling */
+.vitrine-title {
+  text-align: center;
+  color: #ff9bb3; /* Soft pink */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Products grid */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 15px;
+}
+
+/* Individual product card */
+.produto-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0e6ff; /* Very light purple border */
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Product image */
+.produto-imagem {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0e6ff;
+}
+
+/* Product info */
+.produto-info {
+  padding: 20px;
+}
+
+.produto-nome {
+  color: #8a7fff; /* Soft lavender */
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.produto-descricao {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.produto-preco {
+  color: #ff9bb3; /* Soft pink */
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Button styling */
+.btn-comprar {
+  display: inline-block;
+  background-color: #a5e1ff; /* Soft baby blue */
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-comprar:hover {
+  background-color: #8ad1f5; /* Slightly darker blue */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .produtos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+  .vitrine-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+}
